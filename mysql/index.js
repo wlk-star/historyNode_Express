@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
     port: '3306',//端口号
     user: 'root',//用户名
     password: 'root',//密码
-    database: 'online_note'//数据库名称
+    database:  'historical_events',//数据库名称
 });
 connection.connect();
 

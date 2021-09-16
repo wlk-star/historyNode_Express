@@ -1,18 +1,6 @@
 // sql语句
 var sqlMap = {
-    // 用户
-    // student: {
-    //     add: 'insert into user(id, name, age) values (0, ?, ?)',
-    //     selectAll: 'select * from students',
-    //     selectOne: `
-    //         select * from students where sno = ?;
-    //         select * from s_sc_c_tc_t where sno = ?;
-    //         select * from teaching_task;
-    //     `,
-    //     updatePass: 'update students set PASSWORD = ? where sno =? ',
-    //     select:' insert into sc values(?,?,null,?)',
-    //     unselect:'delete from sc where sno=? and cno=? and tno=?'
-    // },
+
     user:{
         getUser:'select * from user where id = ?',
         register:'insert into user(username,password) values(?,?)',
@@ -36,10 +24,12 @@ var sqlMap = {
         getUnStar:'select * from files where user_id = ? and starTab = 0',
         type:'update files set type=-2  where id =? ',
         search:"select * from files where file_name like ? and user_id = ? ; "
+    },
+    history:{
+        getPeriod:'select * from period;',
+        getEvents:'select * from events where periodID = ?;'
     }
-    // register: {
-    //     check: 'SELECT * FROM user WHERE sno = ? AND PASSWORD = ?'
-    // }
+
 }
 
 module.exports = sqlMap;

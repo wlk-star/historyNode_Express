@@ -4,7 +4,7 @@ module.exports = {
         host: 'localhost',
         user: 'root',
         password: 'root',
-        database: 'online_note',
+        database: 'historical_events',
         multipleStatements: true
     }
 }
